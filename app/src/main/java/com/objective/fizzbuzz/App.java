@@ -13,13 +13,17 @@ public class App {
         for (int i = 1; i <= 100; i ++) {
             System.out.println(app.fizzBuzz(i));
         }
+
+        System.out.println("===============");
         System.out.println("Fizz Buzz with IntStream");
         IntStream.rangeClosed(1,100)
                 .mapToObj(i -> i % 3 == 0 ? (i % 5 == 0 ? "Fizz Buzz" : "Fizz") : (i % 5 == 0 ? "Buzz" : i))
                 .forEach(System.out::println);
 
+        System.out.println("===============");
+        System.out.println("Fizz Buzz with a Class");
         for (int num = 1; num <= 100; num ++) {
-            System.out.println(new FizzBuzz(num).getResult());
+            System.out.println(new FizzBuzz(num).getFizzBuzzNumber());
         }
     }
 

@@ -5,7 +5,7 @@ public class FizzBuzz {
     private String fizz = "";
     private String buzz = "";
 
-    private Integer number;
+    private final Integer number;
 
     public FizzBuzz(Integer num) {
         number = num;
@@ -13,7 +13,7 @@ public class FizzBuzz {
         if (num % 5 == 0) this.buzz = "Buzz";
     }
 
-    public String getResult() {
+    public String getFizzBuzzNumber() {
         if (fizz.isBlank() && buzz.isBlank()) return String.valueOf(number);
         return (fizz + " " + buzz).trim();
     }
