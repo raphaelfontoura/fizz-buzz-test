@@ -1,4 +1,4 @@
-package com.objective.tecnica;
+package com.objective.fizzbuzz;
 
 public class FizzBuzz {
 
