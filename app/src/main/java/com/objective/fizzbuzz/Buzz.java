@@ -1,15 +1,15 @@
 package com.objective.fizzbuzz;
 
-public class FizzBuzz extends FizzBuzzChainAbstract{
+public class Buzz extends FizzBuzzChainAbstract{
 
-    public FizzBuzz(FizzBuzzChainAbstract fizzBuzzChainAbstract) {
+    public Buzz(FizzBuzzChainAbstract fizzBuzzChainAbstract) {
         super(fizzBuzzChainAbstract);
     }
 
     @Override
     public String checkFizzBuzz(Integer number) {
-        if (number % 3 == 0 && number % 5 == 0) {
-            return "Fizz Buzz";
+        if (number % 5 == 0) {
+            return "Buzz";
         }
         return next.checkFizzBuzz(number);
     }

@@ -23,7 +23,14 @@ public class App {
         System.out.println("===============");
         System.out.println("Fizz Buzz with a Class");
         for (int num = 1; num <= 100; num ++) {
-            System.out.println(new FizzBuzz(num).getFizzBuzzNumber());
+            System.out.println(new FizzBuzzSimple(num).getFizzBuzzNumber());
+        }
+
+        System.out.println("===============");
+        System.out.println("FizzBuzz with Chain of Responsability");
+        for (int num = 1; num <= 100; num ++) {
+            FizzBuzz fizzBuzz = new FizzBuzz(new Fizz(new Buzz(new NotFizzBuzz())));
+            System.out.println(fizzBuzz.checkFizzBuzz(num));
         }
     }
 
