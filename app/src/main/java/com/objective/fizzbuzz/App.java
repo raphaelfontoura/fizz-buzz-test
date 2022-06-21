@@ -28,8 +28,9 @@ public class App {
 
         System.out.println("===============");
         System.out.println("FizzBuzz with Chain of Responsability");
+        FizzBuzz fizzBuzz = new FizzBuzz(new Fizz(new Buzz(new NotFizzBuzz())));
+
         for (int num = 1; num <= 100; num ++) {
-            FizzBuzz fizzBuzz = new FizzBuzz(new Fizz(new Buzz(new NotFizzBuzz())));
             System.out.println(fizzBuzz.checkFizzBuzz(num));
         }
     }
